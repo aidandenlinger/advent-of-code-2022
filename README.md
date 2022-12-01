@@ -19,6 +19,11 @@ proper input, it will panic on improper inputs.
 
 `cargo test` will run basic tests on the examples from the problem prompt.
 
+## Thanks
+Thanks to other folks publishing their Rust repos to refine my code afterwards :)
+
+- timvisee, <https://github.com/timvisee/advent-of-code-2022>
+
 ## Contributing
 Not accepting contributions, these are puzzles :)
 
