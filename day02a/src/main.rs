@@ -1,5 +1,7 @@
+const INPUT: &str = include_str!("../input.txt");
+
 fn main() {
-    println!("{}", calc_score(parse(include_str!("../input.txt"))));
+    println!("{}", calc_score(parse(INPUT)));
 }
 
 fn parse(s: &str) -> Vec<(Move, Move)> {
@@ -100,5 +102,10 @@ C Z";
     #[test]
     fn test_web() {
         assert_eq!(15, calc_score(PARSED_WEB_EXAMPLE.to_vec()));
+    }
+
+    #[test]
+    fn answer() {
+        assert_eq!(15691, calc_score(parse(INPUT)));
     }
 }

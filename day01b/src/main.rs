@@ -1,5 +1,7 @@
+const INPUT: &str = include_str!("../input.txt");
+
 fn main() {
-    println!("{}", find_top_three(parse(include_str!("../input.txt"))));
+    println!("{}", find_top_three(parse(INPUT)));
 }
 
 // Given input, sums up each of the inner arrays and returns the sum of the
@@ -55,5 +57,10 @@ mod test {
     #[test]
     fn answer_web() {
         assert_eq!(45000, find_top_three(parse(WEB_EXAMPLE)))
+    }
+
+    #[test]
+    fn answer() {
+        assert_eq!(195625, find_top_three(parse(INPUT)))
     }
 }

@@ -1,5 +1,7 @@
+const INPUT: &str = include_str!("../input.txt");
+
 fn main() {
-    println!("{}", find_max(parse(include_str!("../input.txt"))));
+    println!("{}", find_max(parse(INPUT)));
 }
 
 // Given input, sums up each of the inner arrays and returns the maximum
@@ -53,5 +55,10 @@ mod test {
     #[test]
     fn answer_web() {
         assert_eq!(24000, find_max(parse(WEB_EXAMPLE)))
+    }
+
+    #[test]
+    fn answer() {
+        assert_eq!(65912, find_max(parse(INPUT)))
     }
 }
