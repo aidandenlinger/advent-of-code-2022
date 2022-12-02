@@ -3,12 +3,12 @@
 Doing Advent of Code 2022 in Rust for fun :)
 
 Solutions will likely be non-optimal, they will try to be idiomatic to the
-extent of my knowledge of Rust. You can find Advent of Code 2022 [here](https://
-adventofcode.com/2022).
+extent of my knowledge of Rust. You can find Advent of Code 2022
+[here](https://adventofcode.com/2022).
 
 ## Install
-You need the rust toolchain, which you can install with [rustup](https://
-rustup.rs/).
+You need the rust toolchain, which you can install with
+[rustup](https://rustup.rs/).
 
 ## Usage
 Each day has two folders - one for part a and one for part b.
