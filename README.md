@@ -2,8 +2,8 @@
 
 Doing Advent of Code 2022 in Rust for fun :)
 
-Solutions will likely be non-optimal, they will try to be idiomatic to the
-extent of my knowledge of Rust. You can find Advent of Code 2022
+Solutions prioritize legibility over optimality, although both are limited to
+the extent of my knowledge ;). You can find Advent of Code 2022
 [here](https://adventofcode.com/2022).
 
 ## Install
@@ -20,9 +20,13 @@ proper input, it will panic on improper inputs.
 `cargo test` will run basic tests on the examples from the problem prompt.
 
 ## Thanks
-Thanks to other folks publishing their Rust repos to refine my code afterwards :)
+Thanks to other folks publishing their Rust repos so I can compare and improve
+my code afterwards :)
 
 - timvisee, <https://github.com/timvisee/advent-of-code-2022>
+- fspoettel, <https://github.com/fspoettel/advent-of-code-2022>
+- AxlLind, <https://github.com/AxlLind/AdventOfCode2022>
+- aldanor, <https://github.com/aldanor/aoc-2022>
 
 ## Contributing
 Not accepting contributions, these are puzzles :)
