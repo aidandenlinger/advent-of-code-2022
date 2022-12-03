@@ -1,7 +1,4 @@
-use std::{
-    collections::{HashMap, HashSet},
-    str::FromStr,
-};
+use std::{collections::HashSet, str::FromStr};
 
 const INPUT: &str = include_str!("../input.txt");
 
@@ -18,10 +15,7 @@ fn parse(s: &str) -> Vec<Knapsack> {
 }
 
 fn find_error(k: &Knapsack) -> char {
-    let l_keys: HashSet<&char> = k.l.0.keys().collect();
-    let r_keys: HashSet<&char> = k.r.0.keys().collect();
-
-    **l_keys.intersection(&r_keys).next().unwrap()
+    *k.l.0.intersection(&k.r.0).next().unwrap()
 }
 
 fn priority(c: char) -> i32 {
@@ -34,7 +28,7 @@ fn priority(c: char) -> i32 {
     }
 }
 
-struct Compartment(HashMap<char, i32>);
+struct Compartment(HashSet<char>);
 
 struct Knapsack {
     l: Compartment,
@@ -46,19 +40,9 @@ impl FromStr for Knapsack {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let (l_str, r_str) = s.split_at(s.len() / 2);
-        let (mut l, mut r) = (HashMap::new(), HashMap::new());
-
-        for c in l_str.chars() {
-            *l.entry(c).or_insert(0) += 1;
-        }
-
-        for c in r_str.chars() {
-            *r.entry(c).or_insert(0) += 1;
-        }
-
         Ok(Knapsack {
-            l: Compartment(l),
-            r: Compartment(r),
+            l: Compartment(l_str.chars().collect()),
+            r: Compartment(r_str.chars().collect()),
         })
     }
 }
