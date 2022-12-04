@@ -6,23 +6,23 @@ fn main() {
     println!("{}", run(INPUT));
 }
 
-fn run(s: &str) -> i32 {
+fn run(s: &str) -> usize {
     overlap_pairs(parse(s))
 }
 
-fn overlap_pairs(pairs: Vec<(RangeInclusive<i32>, RangeInclusive<i32>)>) -> i32 {
+fn overlap_pairs(pairs: Vec<(RangeInclusive<i32>, RangeInclusive<i32>)>) -> usize {
     pairs
         .iter()
         .filter_map(|p| {
             if (p.0.contains(p.1.start()) || p.0.contains(p.1.end()))
                 || (p.1.contains(p.0.start()) || p.1.contains(p.0.end()))
             {
-                Some(1)
+                Some(())
             } else {
                 None
             }
         })
-        .sum()
+        .count()
 }
 
 fn parse(s: &str) -> Vec<(RangeInclusive<i32>, RangeInclusive<i32>)> {
