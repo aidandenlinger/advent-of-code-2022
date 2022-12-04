@@ -13,11 +13,15 @@ You need the rust toolchain, which you can install with
 ## Usage
 Each day has two folders - one for part a and one for part b.
 
-To run, open that day and part's folder, place your desired input in `input.txt`
-(by default my input is there), and run `cargo run`. These solutions assume
-proper input, it will panic on improper inputs.
+To run, optionally place your input in the `input` folder with the filename
+`dayxx.txt`, with `xx` being the day you want to run. By default, it runs with
+my inputs. Then, open that day and part's folder and run `cargo run`. These
+solutions assume proper input, it will panic on improper inputs.
 
-`cargo test` will run basic tests on the examples from the problem prompt.
+`cargo test` will run basic tests on the examples from the problem prompt, as
+well as test that it produces the expected answer from my input. If you change
+the inputs, that unit test will now fail since the input is different, this
+would be expected.
 
 ## Thanks
 Thanks to other folks publishing their Rust repos so I can compare and improve

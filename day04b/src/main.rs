@@ -1,6 +1,6 @@
 use std::ops::RangeInclusive;
 
-const INPUT: &str = include_str!("../input.txt");
+const INPUT: &str = include_str!("../../input/day04.txt");
 
 fn main() {
     println!("{}", run(INPUT));
