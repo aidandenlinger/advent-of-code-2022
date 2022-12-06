@@ -8,7 +8,7 @@ fn main() {
 
 fn run(s: &str) -> Option<usize> {
     for (idx, chars) in s.chars().collect::<Vec<_>>().windows(4).enumerate() {
-        let set: HashSet<char> = chars.iter().copied().collect();
+        let set: HashSet<&char> = HashSet::from_iter(chars);
         if set.len() == 4 {
             return Some(idx + 4); // inc by 4
         }
@@ -29,6 +29,6 @@ mod tests {
 
     #[test]
     fn test() {
-        assert_eq!(0, run(INPUT).unwrap())
+        assert_eq!(1175, run(INPUT).unwrap())
     }
 }

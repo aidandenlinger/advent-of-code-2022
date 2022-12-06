@@ -8,9 +8,9 @@ fn main() {
 
 fn run(s: &str) -> Option<usize> {
     for (idx, chars) in s.chars().collect::<Vec<_>>().windows(14).enumerate() {
-        let set: HashSet<char> = chars.iter().copied().collect();
+        let set: HashSet<&char> = HashSet::from_iter(chars);
         if set.len() == 14 {
-            return Some(idx + 14); // inc by 4
+            return Some(idx + 14); // inc by 14
         }
     }
     None
