@@ -31,6 +31,7 @@ my code afterwards :)
 - fspoettel, <https://github.com/fspoettel/advent-of-code-2022>
 - AxlLind, <https://github.com/AxlLind/AdventOfCode2022>
 - aldanor, <https://github.com/aldanor/aoc-2022>
+- fasterthanlime, <https://fasterthanli.me/series/advent-of-code-2022>
 
 ## Contributing
 Not accepting contributions, these are puzzles :)
